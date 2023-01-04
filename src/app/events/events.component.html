@@ -1,0 +1,32 @@
+
+
+
+
+<table class="table">
+<thead>
+    <tr>
+    <th scope="col">#Id</th>
+    <th scope="col">Name</th>
+    <th scope="col">Price</th>
+    <th scope="col">Animator</th>
+    <th scope="col">Theme</th>
+    <th scope="col">Picture</th>
+    <th scope="col">sponsors</th>
+    </tr>
+</thead>
+<tbody>
+
+
+    <tr *ngFor="let event of events" >
+    <th scope="row">{{event.id}}</th>
+    <td>{{event.name}}</td>
+    <td>{{event.price}}</td>
+    <td>{{event.animator}}</td>
+    <td>{{event.theme.name}}</td>
+    <td><img src="/eventapi/images/{{event.picture}}" style="width: 50px; height: 50px;" > </td>
+    <td>{{getSponsorList(event.id)}}</td>
+    </tr>
+
+
+</tbody>
+</table>
